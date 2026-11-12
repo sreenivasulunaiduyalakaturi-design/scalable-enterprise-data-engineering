@@ -1,0 +1,11 @@
+app_name: scalable-enterprise-data-engineering
+spark:
+  master: "local[*]"            # use yarn / k8s://... / spark://host:7077 in production
+  shuffle_partitions: 8         # tune upward for large clusters
+paths:
+  raw: data/raw/sales.csv
+  bronze: data/bronze/sales
+  silver: data/silver/sales
+  gold: data/gold
+quality:
+  max_bad_row_ratio: 0.10       # fail the pipeline if >10% rows are invalid

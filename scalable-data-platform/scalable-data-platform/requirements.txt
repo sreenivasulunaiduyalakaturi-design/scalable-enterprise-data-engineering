@@ -1,0 +1,4 @@
+pyspark==3.5.1
+pyyaml==6.0.1
+pytest==8.2.0
+apache-airflow==2.9.1   # optional, only for dags/
